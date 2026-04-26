@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premium Showcase</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader" class="preloader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="logo">Nexus<span>.</span></a>
+      <ul class="nav-links">
+        <li><a class="nav-link" href="#services">Services</a></li>
+        <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn" aria-label="Toggle dark mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button id="hamburger" class="icon-btn mobile-only" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a class="mobile-nav-link" href="#services">Services</a></li>
+        <li><a class="mobile-nav-link" href="#portfolio">Portfolio</a></li>
+        <li><a class="mobile-nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-content fade-in">
+      <h1>Building the <span>Future</span></h1>
+      <p>We create premium, scalable web experiences that inspire and perform.</p>
+      <a href="#portfolio" class="btn btn-primary cta-btn">View Our Work</a>
+    </div>
+  </section>
+
+  <!-- Global Search Bar -->
+  <div class="search-container fade-in">
+    <i class="fas fa-search"></i>
+    <input type="text" id="global-search" placeholder="Search services or projects...">
+  </div>
+
+  <!-- Services Section -->
+  <section id="services" class="services section fade-in">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Discover what we can do for you.</p>
+    </div>
+    <div class="services-grid" id="services-grid">
+      <div class="card service-card" data-modal="modal-design">
+        <i class="fas fa-pen-nib"></i>
+        <h3>UI/UX Design</h3>
+        <p>Crafting intuitive and engaging user experiences.</p>
+      </div>
+      <div class="card service-card" data-modal="modal-dev">
+        <i class="fas fa-code"></i>
+        <h3>Web Development</h3>
+        <p>Building robust, scalable frontend and backend architectures.</p>
+      </div>
+      <div class="card service-card" data-modal="modal-seo">
+        <i class="fas fa-chart-line"></i>
+        <h3>SEO Optimization</h3>
+        <p>Boosting your visibility on popular search engines.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio section fade-in">
+    <div class="section-header">
+      <h2>Featured Works</h2>
+      <p>Explore our recent projects.</p>
+    </div>
+    
+    <div class="filter-controls">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web App</button>
+      <button class="filter-btn" data-filter="mobile">Mobile</button>
+      <button class="filter-btn" data-filter="design">Design</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolio-grid">
+      <div class="portfolio-item card" data-category="web">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Web App">
+        <div class="portfolio-info">
+          <h3>E-Commerce Platform</h3>
+          <p>Web App</p>
+        </div>
+      </div>
+      <div class="portfolio-item card" data-category="mobile">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=600&q=80" alt="Mobile App">
+        <div class="portfolio-info">
+          <h3>Banking Application</h3>
+          <p>Mobile</p>
+        </div>
+      </div>
+      <div class="portfolio-item card" data-category="design">
+        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&w=600&q=80" alt="UI Design">
+        <div class="portfolio-info">
+          <h3>SaaS Dashboard UI</h3>
+          <p>Design</p>
+        </div>
+      </div>
+      <div class="portfolio-item card" data-category="web">
+        <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80" alt="Web App">
+        <div class="portfolio-info">
+          <h3>Social Network</h3>
+          <p>Web App</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section fade-in">
+    <div class="section-header">
+      <h2>Get in Touch</h2>
+      <p>Let's build something amazing together.</p>
+    </div>
+    <div class="form-container card">
+      <form id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe">
+          <span class="error-text">Name is required.</span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com">
+          <span class="error-text">Please enter a valid email address.</span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="How can we help?"></textarea>
+          <span class="error-text">Message is required.</span>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn">Send Message</button>
+        <div id="form-feedback" class="form-feedback"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Nexus. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scroll-top" class="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+
+  <div class="modal" id="modal-design">
+    <button class="close-modal"><i class="fas fa-times"></i></button>
+    <h3>UI/UX Design</h3>
+    <p>We create beautiful, intuitive interfaces that delight users and drive conversion. Our process involves deep research and iterative prototyping.</p>
+  </div>
+
+  <div class="modal" id="modal-dev">
+    <button class="close-modal"><i class="fas fa-times"></i></button>
+    <h3>Web Development</h3>
+    <p>Using the latest technologies, we build reliable, fast, and scalable applications tailored to your business needs.</p>
+  </div>
+
+  <div class="modal" id="modal-seo">
+    <button class="close-modal"><i class="fas fa-times"></i></button>
+    <h3>SEO Optimization</h3>
+    <p>Improve your search rankings through proven, white-hat SEO strategies, technical audits, and performance marketing.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
